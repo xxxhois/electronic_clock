@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-
 entity min is
 port(clk,clr,clk_s:in std_logic;
 	set:in std_logic;
@@ -10,8 +9,7 @@ port(clk,clr,clk_s:in std_logic;
 	min_ring:out std_logic;
 	qin1,qin0:in std_logic_vector(3 downto 0);
 	qout1,qout0:out std_logic_vector(3 downto 0);
-	cout:out std_logic
-	--shine_out:out std_logic); --
+	cout:out std_logic);
 end entity;
 
 architecture func of min is
@@ -47,10 +45,8 @@ begin
 			end if;
 		end if;
 		if (set='1' and alarm='1') then
-			
-				qout1<=qin1;
-				qout0<=qin0;
-				--shine_out<='1';
+			qout1<=qin1;
+			qout0<=qin0;
 		else
 			qout1<=cnt1;
 			qout0<=cnt0;
