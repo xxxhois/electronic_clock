@@ -17,7 +17,7 @@ begin
 			qout<='0';
 			temp<="000000";
 		elsif (clk'event and clk='1') then
-			if (min_ring1='1' or hour='1') then
+			if (min_ring1='1' and hour='1') then
 				temp<=temp+1;--ring 4s
 				if (temp>4) then
 					qout<='0';

@@ -39,8 +39,8 @@ begin
 			end if;
 		end if;
 		if (set='1' and alarm='1') then
-			qout1<=qin1;
-			qout0<=qin0;
+				qout1<=qin1;
+				qout0<=qin0;
 		else
 			qout1<=cnt1;
 			qout0<=cnt0;
@@ -55,3 +55,4 @@ begin
 		hour_ring<=temp2;
 	end process;
 end func;
+
